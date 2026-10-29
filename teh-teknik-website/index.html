@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#123d2b" />
+  <meta name="description" content="Teh Teknik — es teh enak, murah, dan dekat kampus. Temukan menu es teh segar di dekat Fakultas Teknik Unsoed." />
+  <title>Teh Teknik — Segarnya Teman Kuliah</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { forest: '#123d2b', leaf: '#2f6848', cream: '#fbf6e9', tea: '#d98528' }, fontFamily: { display: ['Trebuchet MS', 'ui-sans-serif', 'sans-serif'] } } } }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body { font-family: 'DM Sans', sans-serif; }
+    h1,h2,h3,.brand-font { font-family: 'Manrope', sans-serif; }
+    .hero-bg { background: radial-gradient(ellipse at 78% 28%, rgba(217,133,40,.16), transparent 35%), linear-gradient(135deg,#fbf6e9 0%,#f5eedc 100%); }
+    .soft-shadow { box-shadow: 0 22px 60px rgba(18,61,43,.12); }
+    .menu-card { transition: transform .25s ease, box-shadow .25s ease; }
+    .menu-card:hover { transform: translateY(-5px); box-shadow: 0 22px 50px rgba(18,61,43,.12); }
+    .grain { background-image: radial-gradient(rgba(18,61,43,.055) .7px, transparent .7px); background-size: 10px 10px; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *,*::before,*::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+  </style>
+</head>
+<body class="bg-cream text-forest antialiased">
+  <header class="sticky top-0 z-50 border-b border-forest/10 bg-cream/95 backdrop-blur-md">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 md:px-8" aria-label="Navigasi utama">
+      <a href="#beranda" class="flex items-center gap-3" aria-label="Teh Teknik, ke beranda">
+        <img src="assets/logo-bulat.jpg" alt="Logo Teh Teknik" class="h-12 w-12 rounded-full border border-forest/10 object-cover" />
+        <span class="brand-font text-lg font-extrabold tracking-tight sm:text-xl">Teh <span class="text-leaf">Teknik</span><span class="mt-0.5 block text-[10px] font-semibold tracking-[.16em] text-forest/60">SEGARNYA TEMAN KULIAH</span></span>
+      </a>
+      <div class="hidden items-center gap-7 text-sm font-semibold md:flex">
+        <a class="nav-link hover:text-tea" href="#beranda">Beranda</a><a class="nav-link hover:text-tea" href="#tentang">Tentang Kami</a><a class="nav-link hover:text-tea" href="#menu">Menu</a><a class="nav-link hover:text-tea" href="#lokasi">Lokasi</a><a class="nav-link hover:text-tea" href="#kontak">Kontak</a>
+      </div>
+      <a href="#menu" class="hidden rounded-full bg-forest px-5 py-3 text-sm font-bold text-white transition hover:bg-leaf md:inline-flex">Lihat Menu <span class="ml-2" aria-hidden="true">↗</span></a>
+      <button id="menu-toggle" class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-forest/15 text-forest md:hidden" aria-label="Buka navigasi" aria-expanded="false" aria-controls="mobile-menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </nav>
+    <div id="mobile-menu" class="hidden border-t border-forest/10 bg-cream px-5 py-3 md:hidden"><div class="mx-auto flex max-w-7xl flex-col gap-1 text-sm font-semibold"><a class="rounded-lg px-3 py-3 hover:bg-forest/5" href="#beranda">Beranda</a><a class="rounded-lg px-3 py-3 hover:bg-forest/5" href="#tentang">Tentang Kami</a><a class="rounded-lg px-3 py-3 hover:bg-forest/5" href="#menu">Menu</a><a class="rounded-lg px-3 py-3 hover:bg-forest/5" href="#lokasi">Lokasi</a><a class="rounded-lg px-3 py-3 hover:bg-forest/5" href="#kontak">Kontak</a></div></div>
+  </header>
+
+  <main>
+    <section id="beranda" class="hero-bg relative overflow-hidden">
+      <div class="grain absolute inset-0 opacity-40"></div>
+      <div class="relative mx-auto grid max-w-7xl items-center gap-10 px-5 py-14 md:grid-cols-2 md:px-8 md:py-24 lg:gap-16">
+        <div class="order-2 md:order-1">
+          <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-leaf/20 bg-white/70 px-4 py-2 text-xs font-bold uppercase tracking-[.13em] text-leaf"><span class="h-2 w-2 rounded-full bg-tea"></span> Segar • Hemat • Dekat Kampus</div>
+          <h1 class="max-w-xl text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">Rehat sebentar,<br><span class="text-leaf">seruput</span> kesegaran.</h1>
+          <p class="mt-6 max-w-lg text-base leading-7 text-forest/70 sm:text-lg">Teh Teknik — es teh enak, murah, dan dekat kampus. Teman segar buat jeda kelas, nugas, atau ngobrol bareng teman.</p>
+          <p class="mt-4 flex items-center gap-2 text-sm font-semibold text-forest"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d98528" stroke-width="2"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> Dekat Fakultas Teknik Unsoed</p>
+          <div class="mt-8 flex flex-wrap gap-3"><a href="#menu" class="inline-flex items-center justify-center rounded-full bg-forest px-7 py-4 text-sm font-bold text-white shadow-lg shadow-forest/15 transition hover:-translate-y-0.5 hover:bg-leaf">Jelajahi Menu <span class="ml-3" aria-hidden="true">↓</span></a><a href="#lokasi" class="inline-flex items-center justify-center rounded-full border border-forest/20 bg-white/60 px-7 py-4 text-sm font-bold transition hover:bg-white">Temukan Lokasi</a></div>
+          <div class="mt-10 flex items-center gap-4 border-t border-forest/10 pt-6"><div class="flex -space-x-2"><span class="grid h-9 w-9 place-items-center rounded-full border-2 border-cream bg-[#e8c99d] text-sm">🍃</span><span class="grid h-9 w-9 place-items-center rounded-full border-2 border-cream bg-[#f4d5aa] text-sm">🧊</span><span class="grid h-9 w-9 place-items-center rounded-full border-2 border-cream bg-[#d8e2c8] text-sm">🥤</span></div><p class="text-xs leading-5 text-forest/65"><strong class="block text-sm text-forest">Sederhana, segar, bersahabat.</strong> Pilihan pas untuk hari-hari di kampus.</p></div>
+        </div>
+        <div class="relative order-1 mx-auto w-full max-w-lg md:order-2">
+          <div class="absolute -right-2 top-8 h-28 w-28 rounded-full bg-tea/20 blur-2xl sm:-right-4"></div><div class="absolute -bottom-5 -left-4 h-32 w-32 rounded-full bg-leaf/20 blur-2xl"></div>
+          <div class="relative rotate-1 rounded-[2rem] border border-white/80 bg-white p-3 soft-shadow sm:p-4"><img src="assets/es-teh.jpg" alt="Segelas es teh Teh Teknik dengan es batu dan logo brand" class="h-[390px] w-full rounded-[1.5rem] object-cover object-center sm:h-[510px]" /><div class="absolute bottom-7 left-7 rounded-2xl border border-white/70 bg-cream/95 px-5 py-4 shadow-lg backdrop-blur"><p class="text-[10px] font-bold uppercase tracking-[.18em] text-leaf">Favorit anak kampus</p><p class="mt-1 text-xl font-extrabold">Mulai Rp4.000</p></div></div>
+          <div class="absolute -left-5 top-12 hidden -rotate-6 rounded-2xl bg-forest px-4 py-3 text-white shadow-xl sm:block"><span class="block text-xs text-white/70">Mood booster</span><span class="text-sm font-bold">Sruput dulu! ✦</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-forest/10 bg-white/65"><div class="mx-auto grid max-w-7xl grid-cols-1 gap-5 px-5 py-6 text-center sm:grid-cols-3 sm:px-8"><div class="flex items-center justify-center gap-3"><span class="grid h-10 w-10 place-items-center rounded-full bg-cream text-xl">🍃</span><div class="text-left"><p class="text-sm font-extrabold">Segar setiap seruput</p><p class="text-xs text-forest/60">Pas buat jeda aktivitas</p></div></div><div class="flex items-center justify-center gap-3"><span class="grid h-10 w-10 place-items-center rounded-full bg-cream text-xl">💸</span><div class="text-left"><p class="text-sm font-extrabold">Ramah kantong</p><p class="text-xs text-forest/60">Harga mulai Rp4.000</p></div></div><div class="flex items-center justify-center gap-3"><span class="grid h-10 w-10 place-items-center rounded-full bg-cream text-xl">📍</span><div class="text-left"><p class="text-sm font-extrabold">Dekat area kampus</p><p class="text-xs text-forest/60">Mampir di sekitar FT Unsoed</p></div></div></div></section>
+
+    <section id="menu" class="px-5 py-20 md:px-8 md:py-28"><div class="mx-auto max-w-7xl"><div class="mx-auto max-w-2xl text-center"><span class="text-xs font-extrabold uppercase tracking-[.2em] text-tea">Menu andalan</span><h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Kesegaran yang <span class="text-leaf">nggak bikin tekor.</span></h2><p class="mt-4 leading-7 text-forest/65">Pilih teman segarmu hari ini. Simpel, nikmat, dan cocok menemani padatnya jadwal kuliah.</p></div>
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:mx-auto lg:max-w-4xl">
+        <article class="menu-card overflow-hidden rounded-[1.75rem] border border-forest/10 bg-white"><div class="relative h-64 overflow-hidden bg-[#f1dfbd]"><img src="assets/es-teh.jpg" alt="Es Teh Original berwarna amber dengan es batu" class="h-full w-full object-cover object-center transition duration-500 hover:scale-105"/><span class="absolute left-5 top-5 rounded-full bg-cream px-3 py-2 text-[10px] font-extrabold uppercase tracking-wider text-forest">Best seller</span></div><div class="p-6 sm:p-7"><div class="flex items-start justify-between gap-4"><div><h3 class="text-xl font-extrabold">Es Teh Original</h3><p class="mt-2 max-w-xs text-sm leading-6 text-forest/60">Rasa teh klasik yang menyegarkan, pas dinikmati kapan saja.</p></div><span class="shrink-0 rounded-xl bg-cream px-3 py-2 text-base font-extrabold text-leaf">4K</span></div><div class="mt-5 flex items-center justify-between border-t border-forest/10 pt-4"><span class="text-sm font-medium text-forest/60">Harga</span><span class="text-lg font-extrabold">Rp 4.000</span></div></div></article>
+        <article class="menu-card overflow-hidden rounded-[1.75rem] border border-forest/10 bg-white"><div class="relative h-64 overflow-hidden bg-[#f1dfbd]"><img src="assets/es-teh.jpg" alt="Es teh segar sebagai inspirasi Es Teh Lemon" class="h-full w-full scale-105 object-cover object-center transition duration-500 hover:scale-110"/><span class="absolute left-5 top-5 rounded-full bg-forest px-3 py-2 text-[10px] font-extrabold uppercase tracking-wider text-white">Fresh & citrus</span><span class="absolute bottom-4 right-4 grid h-14 w-14 place-items-center rounded-full border-2 border-white bg-[#f4d65f] text-2xl shadow-lg" aria-hidden="true">🍋</span></div><div class="p-6 sm:p-7"><div class="flex items-start justify-between gap-4"><div><h3 class="text-xl font-extrabold">Es Teh Lemon</h3><p class="mt-2 max-w-xs text-sm leading-6 text-forest/60">Perpaduan teh dan sentuhan lemon untuk sensasi segar yang ceria.</p></div><span class="shrink-0 rounded-xl bg-cream px-3 py-2 text-base font-extrabold text-leaf">5K</span></div><div class="mt-5 flex items-center justify-between border-t border-forest/10 pt-4"><span class="text-sm font-medium text-forest/60">Harga</span><span class="text-lg font-extrabold">Rp 5.000</span></div></div></article>
+      </div><p class="mt-6 text-center text-xs text-forest/50">Harga yang tertera merupakan informasi promosi dan dapat berubah sewaktu-waktu.</p></div></section>
+
+    <section id="tentang" class="overflow-hidden bg-forest text-white"><div class="mx-auto grid max-w-7xl items-center gap-12 px-5 py-20 md:grid-cols-2 md:px-8 md:py-24 lg:gap-20"><div class="relative"><div class="absolute -inset-4 rounded-[2rem] border border-white/10"></div><img src="assets/booth.jpg" alt="Booth kayu Teh Teknik di area kampus" class="relative h-[350px] w-full rounded-[1.5rem] object-cover object-center sm:h-[480px]"/><div class="absolute -bottom-5 right-4 rounded-2xl bg-cream px-5 py-4 text-forest shadow-xl sm:right-8"><p class="text-xs font-semibold text-forest/60">Tempat singgah</p><p class="font-extrabold">Dekat Fakultas Teknik</p></div></div><div><span class="text-xs font-extrabold uppercase tracking-[.2em] text-[#e9b36f]">Cerita Teh Teknik</span><h2 class="mt-4 text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">Dibuat untuk menemani <span class="text-[#e9b36f]">hari-hari kampus.</span></h2><p class="mt-6 leading-7 text-white/70">Kuliah, praktikum, rapat, sampai deadline—hari mahasiswa selalu punya cerita. Teh Teknik hadir sebagai pilihan minuman yang menyegarkan, ekonomis, dan praktis di sekitar Fakultas Teknik Unsoed.</p><p class="mt-4 leading-7 text-white/70">Dengan menu yang sederhana dan harga yang bersahabat, kami ingin jadi tempat mampir favorit untuk mengisi ulang semangat sebelum lanjut beraktivitas.</p><div class="mt-8 grid grid-cols-2 gap-4"><div class="rounded-2xl border border-white/15 bg-white/5 p-4"><span class="text-2xl">🧊</span><p class="mt-3 font-extrabold">Segar & simpel</p><p class="mt-1 text-xs leading-5 text-white/60">Teman istirahat di sela jadwal.</p></div><div class="rounded-2xl border border-white/15 bg-white/5 p-4"><span class="text-2xl">🎓</span><p class="mt-3 font-extrabold">Dekat mahasiswa</p><p class="mt-1 text-xs leading-5 text-white/60">Tumbuh bersama semangat kampus.</p></div></div></div></div></section>
+
+    <section id="lokasi" class="px-5 py-20 md:px-8 md:py-24"><div class="mx-auto max-w-7xl"><div class="grid gap-10 md:grid-cols-[.8fr_1.2fr] md:items-center"><div><span class="text-xs font-extrabold uppercase tracking-[.2em] text-tea">Mampir, yuk!</span><h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Temukan kami <span class="text-leaf">di dekatmu.</span></h2><p class="mt-4 leading-7 text-forest/65">Kalau sedang berada di area kampus, sempatkan mampir untuk menikmati segelas kesegaran.</p><div class="mt-7 flex gap-4"><div class="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-white text-xl shadow-sm">📍</div><div><h3 class="font-extrabold">Area Fakultas Teknik Unsoed</h3><p class="mt-1 text-sm leading-6 text-forest/65">Purwokerto, Jawa Tengah</p><p class="mt-2 text-xs text-forest/50">Lokasi booth dapat mengikuti operasional di area kampus.</p></div></div><a href="https://www.google.com/maps/search/?api=1&query=Fakultas+Teknik+Universitas+Jenderal+Soedirman+Purwokerto" target="_blank" rel="noopener noreferrer" class="mt-7 inline-flex items-center gap-2 rounded-full bg-forest px-6 py-4 text-sm font-bold text-white transition hover:bg-leaf">Buka petunjuk lokasi <span aria-hidden="true">↗</span></a></div><div class="overflow-hidden rounded-[1.75rem] border border-forest/10 bg-white p-3 soft-shadow"><iframe title="Peta area Fakultas Teknik Universitas Jenderal Soedirman" src="https://maps.google.com/maps?q=Fakultas%20Teknik%20Universitas%20Jenderal%20Soedirman%20Purwokerto&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="360" style="border:0;border-radius:1.2rem" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div></div></div></section>
+
+    <section id="kontak" class="bg-[#f0e8d5] px-5 py-20 md:px-8 md:py-24"><div class="mx-auto grid max-w-7xl gap-12 md:grid-cols-2 md:gap-20"><div><span class="text-xs font-extrabold uppercase tracking-[.2em] text-tea">Kontak & masukan</span><h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Ada cerita untuk <span class="text-leaf">Teh Teknik?</span></h2><p class="mt-5 max-w-md leading-7 text-forest/65">Kami senang mendengar saran, ulasan, atau ide menu dari kamu. Isi formulir di samping untuk menyiapkan pesan.</p><div class="mt-8 rounded-2xl border border-forest/10 bg-white/70 p-5"><p class="text-sm font-bold">Informasi operasional</p><p class="mt-2 text-sm leading-6 text-forest/65">Untuk informasi jam buka atau ketersediaan menu, silakan kunjungi booth Teh Teknik di area Fakultas Teknik Unsoed.</p><p class="mt-3 text-xs text-forest/50">Email layanan belum dicantumkan karena alamat resmi belum tersedia.</p></div></div><form id="contact-form" class="rounded-[1.75rem] border border-forest/10 bg-white p-6 soft-shadow sm:p-8"><div class="mb-6"><h3 class="text-xl font-extrabold">Kirim pesan</h3><p class="mt-1 text-sm text-forest/55">Semua kolom wajib diisi.</p></div><label for="nama" class="mb-2 block text-sm font-bold">Nama</label><input id="nama" name="nama" type="text" required maxlength="80" placeholder="Nama kamu" class="mb-5 w-full rounded-xl border border-forest/15 bg-cream/60 px-4 py-3.5 text-sm outline-none transition placeholder:text-forest/35 focus:border-leaf focus:ring-4 focus:ring-leaf/10"/><label for="pesan" class="mb-2 block text-sm font-bold">Pesan / Ulasan</label><textarea id="pesan" name="pesan" required maxlength="1000" rows="5" placeholder="Tulis saran atau ulasanmu di sini..." class="w-full resize-y rounded-xl border border-forest/15 bg-cream/60 px-4 py-3.5 text-sm outline-none transition placeholder:text-forest/35 focus:border-leaf focus:ring-4 focus:ring-leaf/10"></textarea><button type="submit" class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-forest px-6 py-4 text-sm font-bold text-white transition hover:bg-leaf">Kirim pesan <span aria-hidden="true">↗</span></button><p id="form-status" role="status" aria-live="polite" class="mt-4 hidden rounded-xl bg-leaf/10 p-4 text-sm leading-6 text-forest"></p><p class="mt-4 text-center text-xs leading-5 text-forest/45">Formulir demo: pesan tidak dikirim ke server. Hubungkan ke layanan backend untuk menerima pesan secara langsung.</p></form></div></section>
+  </main>
+
+  <footer class="bg-[#0c2d20] px-5 py-10 text-white md:px-8"><div class="mx-auto max-w-7xl"><div class="flex flex-col justify-between gap-8 border-b border-white/10 pb-8 sm:flex-row sm:items-center"><a href="#beranda" class="flex items-center gap-3"><img src="assets/logo-bulat.jpg" alt="" class="h-12 w-12 rounded-full object-cover"/><span class="brand-font text-xl font-extrabold">Teh Teknik<span class="mt-1 block text-[10px] font-semibold tracking-[.16em] text-white/55">SEGARNYA TEMAN KULIAH</span></span></a><nav aria-label="Navigasi footer" class="flex flex-wrap gap-x-5 gap-y-3 text-sm text-white/65"><a class="hover:text-white" href="#beranda">Beranda</a><a class="hover:text-white" href="#tentang">Tentang Kami</a><a class="hover:text-white" href="#menu">Menu</a><a class="hover:text-white" href="#lokasi">Lokasi</a><a class="hover:text-white" href="#kontak">Kontak</a></nav></div><div class="flex flex-col gap-3 pt-6 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between"><p>© 2026 Teh Teknik. Semua hak dilindungi.</p><p>Es teh enak, murah, dan dekat kampus. 🍃</p></div></div></footer>
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    toggle.addEventListener('click', () => {
+      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+      toggle.setAttribute('aria-label', isOpen ? 'Buka navigasi' : 'Tutup navigasi');
+      mobileMenu.classList.toggle('hidden', isOpen);
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden'); toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Buka navigasi');
+    }));
+    document.getElementById('contact-form').addEventListener('submit', event => {
+      event.preventDefault();
+      const nama = document.getElementById('nama').value.trim();
+      const pesan = document.getElementById('pesan').value.trim();
+      const status = document.getElementById('form-status');
+      if (!nama || !pesan) return;
+      status.textContent = `Terima kasih, ${nama}! Pesanmu sudah divalidasi di halaman demo ini. Untuk mengirim dan menyimpan pesan, formulir perlu dihubungkan ke layanan backend.`;
+      status.classList.remove('hidden');
+      event.target.reset();
+    });
+  </script>
+</body>
+</html>
